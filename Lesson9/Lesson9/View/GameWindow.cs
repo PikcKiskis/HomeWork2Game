@@ -23,6 +23,8 @@ namespace Lesson9.GUI
 
             gameWindowButtons = new List<Button>() { startButton, creditsButton, quitButton};
             startButton.SetActive();
+            creditsButton.SetInActive();
+            quitButton.SetInActive();
 
             Render();
         }

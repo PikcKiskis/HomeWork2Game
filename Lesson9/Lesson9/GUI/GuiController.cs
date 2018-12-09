@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lesson9.GUI
 {
-    class GuiController //: IRenderable
+    class GuiController
     {
         private int arrowPushed = 0;
         private bool checkingKeys = true;
@@ -63,7 +63,7 @@ namespace Lesson9.GUI
                                         RenderGame();
                                         break;
                                     case 1:
-                                        RenderCreditWindow();
+                                        RenderCreditWindow();                                   
                                         break;
                                     case 2:
                                         Environment.Exit(0);
@@ -75,7 +75,7 @@ namespace Lesson9.GUI
                                 break;
 
                         }
-                   // }
+                    //}
 
                 } while (checkingKeys);
             }
@@ -85,15 +85,12 @@ namespace Lesson9.GUI
 
         public void RenderCreditWindow()
         {
+            arrowPushed = 0;
             CreditWindow creditWindow = new CreditWindow();
             creditWindow.Render();
             Console.ReadKey();
             ShowMenu();
-        }
-
-        public void Render()
-        {
-            ShowMenu();
+            
         }
 
         public void RenderGame()

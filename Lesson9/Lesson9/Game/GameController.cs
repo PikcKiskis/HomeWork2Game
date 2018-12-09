@@ -60,7 +60,7 @@ namespace Lesson9.Game
                         case ConsoleKey.Escape:
                             needToRender = false;
                             GuiController gui = new GuiController();
-                            gui.Render();
+                            gui.ShowMenu();
                             break;
                         case ConsoleKey.RightArrow:
                             hero.MoveRight();
