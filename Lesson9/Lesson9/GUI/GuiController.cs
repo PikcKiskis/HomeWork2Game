@@ -1,5 +1,4 @@
 ﻿using Lesson9.Game;
-using Lesson9.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;

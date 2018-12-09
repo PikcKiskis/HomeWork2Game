@@ -47,8 +47,6 @@
     <Compile Include="Game\GameScreen.cs" />
     <Compile Include="GUI\Button.cs" />
     <Compile Include="GUI\GuiController.cs" />
-    <Compile Include="Interface\IMovable.cs" />
-    <Compile Include="Interface\IRenderable.cs" />
     <Compile Include="View\CreditWindow.cs" />
     <Compile Include="GUI\Frame.cs" />
     <Compile Include="View\GameWindow.cs" />

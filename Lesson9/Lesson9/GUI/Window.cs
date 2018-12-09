@@ -19,7 +19,7 @@ namespace Lesson9.GUI
             border = new Frame(x,y, width, height, borderChar);
         }
 
-        public void Render()
+        public virtual void Render()
         {
             border.Render();
         }
