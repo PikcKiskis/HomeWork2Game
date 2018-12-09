@@ -9,6 +9,7 @@ namespace Lesson9.Game
 {
     class GameController
     {
+        
         public GameController()
         {
 
@@ -58,6 +59,8 @@ namespace Lesson9.Game
                     {
                         case ConsoleKey.Escape:
                             needToRender = false;
+                            GuiController gui = new GuiController();
+                            gui.Render();
                             break;
                         case ConsoleKey.RightArrow:
                             hero.MoveRight();

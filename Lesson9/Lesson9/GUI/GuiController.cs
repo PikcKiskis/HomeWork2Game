@@ -1,4 +1,5 @@
 ﻿using Lesson9.Game;
+using Lesson9.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lesson9.GUI
 {
-    class GuiController
+    class GuiController //: IRenderable
     {
         private int arrowPushed = 0;
         private bool checkingKeys = true;
@@ -24,8 +25,8 @@ namespace Lesson9.GUI
             {
                 do
                 {
-                    while (Console.KeyAvailable)
-                    {
+                    //while (Console.KeyAvailable)
+                    //{
                         ConsoleKeyInfo pressedChar = Console.ReadKey(true);
                         switch (pressedChar.Key)
                         {
@@ -66,16 +67,16 @@ namespace Lesson9.GUI
                                         RenderCreditWindow();
                                         break;
                                     case 2:
-                                        checkingKeys = false;
+                                        Environment.Exit(0);
                                         break;
                                 }
                                 break;
                             case ConsoleKey.Escape:
-                                checkingKeys = false;
+                                Environment.Exit(0);
                                 break;
 
                         }
-                    }
+                   // }
 
                 } while (checkingKeys);
             }
@@ -88,6 +89,11 @@ namespace Lesson9.GUI
             CreditWindow creditWindow = new CreditWindow();
             creditWindow.Render();
             Console.ReadKey();
+            ShowMenu();
+        }
+
+        public void Render()
+        {
             ShowMenu();
         }
 
